@@ -1,0 +1,34 @@
+# 데이터셋 폴더
+extracted_data/
+skin_dataset/
+skin_dataset_fixed/
+skin_dataset_temp/
+
+# 파인튜닝 결과
+outputs/
+model_16bit/
+
+# 원본 파일 (개인정보 포함)
+finetuning/original/
+
+# 환경 변수
+.env
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
+
+# 로그 파일
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 임시 파일
+*.tmp
+
