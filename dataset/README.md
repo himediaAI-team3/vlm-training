@@ -30,13 +30,14 @@
 mkdir skin-dataset-build
 cd skin-dataset-build
 
-# 이 브랜치 클론
-git clone -b docs/dataset-preprocessing https://github.com/your-username/skin-diagnosis.git .
+# 이 레포지토리 클론
+git clone https://github.com/himediaAI-team3/vlm-training.git .
 
 # 이미지 다운로드 및 배치
 # extracted_data/ 폴더에 AI Hub 이미지 배치
 
 # 작업 진행
+cd dataset
 python pipeline/step1_parse_dataset.py
 python pipeline/step2_add_descriptions.py
 python pipeline/step3_check_issues.py
@@ -53,8 +54,7 @@ python pipeline/step5_upload_to_hub.py
 │   └── ...
 │
 └── dataset-workspace/         # 데이터셋 작업 (별도 폴더)
-    ├── pipeline/              # 이 브랜치 클론
-    ├── config_postprocess.py
+    ├── dataset/               # 이 레포지토리의 dataset/ 폴더
     ├── extracted_data/        # 원본 이미지
     ├── skin_dataset/          # 중간 파일
     └── skin_dataset_fixed/    # 최종본 → HuggingFace 업로드
